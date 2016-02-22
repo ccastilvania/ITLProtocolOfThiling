@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{A0DFD6BB-83E0-416E-B7D3-6779C74F6193}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProtocoloTitulacion</RootNamespace>
+    <AssemblyName>ProtocoloTitulacion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Asignacion Comite</ProductName>
+    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>F6DA9B102ED0C13B25C5C85750045D92A45BB1CB</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ProtocoloTitulacion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>tec.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\Downloads\Librerias de C#\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\Downloads\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alumno.Designer.cs">
+      <DependentUpon>alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alumnos\BajaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alumnos\BajaAlumno.Designer.cs">
+      <DependentUpon>BajaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="funciones\ABalumnos.cs" />
+    <Compile Include="funciones\busquedas.cs" />
+    <Compile Include="funciones\Importar.cs" />
+    <Compile Include="funciones\pdf.cs" />
+    <Compile Include="funciones\Security.cs" />
+    <Compile Include="GeneradorPdf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GeneradorPdf.Designer.cs">
+      <DependentUpon>GeneradorPdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaestorsGUI\altaMaestro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaestorsGUI\altaMaestro.Designer.cs">
+      <DependentUpon>altaMaestro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaestorsGUI\bajaMaestro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaestorsGUI\bajaMaestro.Designer.cs">
+      <DependentUpon>bajaMaestro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaestorsGUI\mostrar_maestros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaestorsGUI\mostrar_maestros.Designer.cs">
+      <DependentUpon>mostrar_maestros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="alumnos\mostrar_alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="alumnos\mostrar_alumnos.Designer.cs">
+      <DependentUpon>mostrar_alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessofTitlingDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProcessofTitlingDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrosGUI\BuscarRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrosGUI\BuscarRegistro.Designer.cs">
+      <DependentUpon>BuscarRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegistrosGUI\NuevoRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegistrosGUI\NuevoRegistro.Designer.cs">
+      <DependentUpon>NuevoRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ProcessofTitlingDataSet.xsc">
+      <DependentUpon>ProcessofTitlingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProcessofTitlingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProcessofTitlingDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ProcessofTitlingDataSet.xss">
+      <DependentUpon>ProcessofTitlingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProtocoloTitulacion_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="alumno.resx">
+      <DependentUpon>alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alumnos\BajaAlumno.resx">
+      <DependentUpon>BajaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="alumnos\mostrar_alumnos.resx">
+      <DependentUpon>mostrar_alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GeneradorPdf.resx">
+      <DependentUpon>GeneradorPdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaestorsGUI\altaMaestro.resx">
+      <DependentUpon>altaMaestro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaestorsGUI\bajaMaestro.resx">
+      <DependentUpon>bajaMaestro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaestorsGUI\mostrar_maestros.resx">
+      <DependentUpon>mostrar_maestros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrosGUI\BuscarRegistro.resx">
+      <DependentUpon>BuscarRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegistrosGUI\NuevoRegistro.resx">
+      <DependentUpon>NuevoRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ProcessofTitling.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ProcessofTitling_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>ProcessofTitling.mdf</DependentUpon>
+    </Content>
+    <Content Include="Recursos\logo_pdf.png" />
+    <Content Include="Recursos\tec laguna.png" />
+    <Content Include="tec.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SqlLocalDB.11.1">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2012 Express LocalDB</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="ProcessofTitling.mdf">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
